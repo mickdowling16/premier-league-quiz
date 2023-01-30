@@ -22,14 +22,14 @@ body {
 }
 
 #logo-div {
-    margin-top: -40px;
+    margin-top: -50px;
     position: absolute;
     top: 0;
 }
 
 /* container and question area styling */
 /* parts of this code was taken from a video on web dev simplified YouTube channel. Linked in readme */
-.container {
+#question-area {
     margin-top: 150px;
     width: 800px;
     max-width: 80%;
@@ -102,7 +102,7 @@ body {
 }
 
 /* score area code was taken from love maths runthrough project */
-.score-area {
+#score-area {
     margin: 5px auto;
     width: 60%;
     font-size: 1.2rem;
@@ -123,6 +123,6 @@ body {
     display: inline-block;
 }
 
-/* .hide {
+.hide {
     display: none;
-} */
+}
