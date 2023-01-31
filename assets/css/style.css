@@ -82,12 +82,12 @@ body {
 }
 
 /* styling for correct and incorrect answer */
-.btn.correct {
-    background-color: green;
+.correct {
+    background-color: #00ff85;
   }
   
-.btn.wrong {
-    background-color: red;
+.wrong {
+    background-color: #e90052;
   }
 
 #start-button:hover, #next-button:hover {
