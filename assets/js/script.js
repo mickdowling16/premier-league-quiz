@@ -8,6 +8,7 @@ let answerButtonsElement = document.getElementById('answer-buttons');
 
 let currentQuestionIndex;
 
+
 startButton.addEventListener('click', runGame)
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
