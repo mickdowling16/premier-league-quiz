@@ -55,14 +55,20 @@ function selectAnswer(e) {
       startButton.innerText = 'Restart'
       startButton.classList.remove('hide')
     }
+
+    if (correct) {
+        incrementScore();
+    } else {
+        incrementWrongAnswer();
+    }
   }
   
 function setStatusClass(element, Correct) {
     clearStatusClass(element)
     if (Correct) {
-      element.classList.add('correct')
+      element.classList.add('correct');
     } else {
-      element.classList.add('wrong')
+      element.classList.add('wrong');
     }
   }
   
@@ -77,6 +83,16 @@ function resetQuiz() {
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild)
       }
+}
+
+function incrementScore() {
+    let oldScore = parseInt(document.getElementById('score').innerText);
+    document.getElementById('score').innerText = ++oldScore;
+}
+
+function incrementWrongAnswer() {
+    let oldScore = parseInt(document.getElementById('incorrect').innerText);
+    document.getElementById('incorrect').innerText = ++oldScore;
 }
 
 let questions = [{ 
@@ -101,7 +117,7 @@ let questions = [{
 },
 {
     id: 2,
-    question: "Which of these players has the most Premier League assists?",
+    question: "Which of these players has more Premier League assists?",
     answers: [{ text: "Alan Shearer", correct: false },
         { text: "Gareth Barry", correct: false },
         { text: "Christan Eriksen", correct: true },
