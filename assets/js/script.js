@@ -4,6 +4,7 @@ let gameArea = document.getElementById('game-area')
 let scoreArea = document.getElementById('score-area')
 let rulesButton = document.getElementById('rules-button')
 let rulesDiv = document.getElementById('rules');
+let startFromRules = document.getElementById('start-from-rules');
 
 let questionElement = document.getElementById('question');
 let answerButtonsElement = document.getElementById('answer-buttons');
@@ -12,6 +13,7 @@ let currentQuestionIndex;
 
 startButton.addEventListener('click', runGame);
 rulesButton.addEventListener('click', showRules);
+startFromRules.addEventListener('click', runGame);
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     nextQuestion()
@@ -22,6 +24,8 @@ function runGame() {
     startButton.classList.add('hide');
     gameArea.classList.remove('hide');
     scoreArea.classList.remove('hide');
+    rulesButton.classList.add('hide');
+    rulesDiv.classList.add('hide');
     currentQuestionIndex = 0
     nextQuestion();
 }

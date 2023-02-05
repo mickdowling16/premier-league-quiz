@@ -105,15 +105,14 @@ body {
 }
 
 #rules-button:hover {
-    background-color: #38003c;
-    color: white;
+    background-color: #00ff85;
 }
 
 #rules {
     background-color: white;
     width: 800px;
     max-width: 80%;
-    height: 300px;
+    height: 350px;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
@@ -129,6 +128,23 @@ body {
 }
 
 #rules p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#start-from-rules {
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 2rem;
+    font-family: Rubik;
+    text-align: center;
+}
+
+#start-from-rules:hover {
+    background-color: #00ff85;
+}
+
+#start-from-rules-div {
     text-align: center;
 }
 
