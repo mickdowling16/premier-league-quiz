@@ -2,18 +2,20 @@ let startButton = document.getElementById('start-button')
 let nextButton = document.getElementById('next-button')
 let gameArea = document.getElementById('game-area')
 let scoreArea = document.getElementById('score-area')
+let rulesButton = document.getElementById('rules-button')
+let rulesDiv = document.getElementById('rules');
 
 let questionElement = document.getElementById('question');
 let answerButtonsElement = document.getElementById('answer-buttons');
 
 let currentQuestionIndex;
 
-
-startButton.addEventListener('click', runGame)
+startButton.addEventListener('click', runGame);
+rulesButton.addEventListener('click', showRules);
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     nextQuestion()
-  })
+  });
 
 function runGame() {
     console.log("started");
@@ -22,6 +24,10 @@ function runGame() {
     scoreArea.classList.remove('hide');
     currentQuestionIndex = 0
     nextQuestion();
+}
+
+function showRules() {
+    rulesDiv.classList.remove('hide');
 }
 
 function nextQuestion() {
