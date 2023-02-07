@@ -28,7 +28,7 @@ function runGame() {
     rulesDiv.classList.add('hide');
     currentQuestionIndex = 0
     nextQuestion();
-    resetScore()
+    resetScore();
 }
 
 function showRules() {
@@ -67,7 +67,7 @@ function selectAnswer(e) {
       startButton.innerText = 'Restart'
       startButton.classList.remove('hide')
     }
-
+    
     if (correct) {
         incrementScore();
     } else {
