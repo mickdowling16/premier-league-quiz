@@ -28,6 +28,7 @@ function runGame() {
     rulesDiv.classList.add('hide');
     currentQuestionIndex = 0
     nextQuestion();
+    resetScore()
 }
 
 function showRules() {
@@ -94,6 +95,15 @@ function resetQuiz() {
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild)
       }
+}
+
+function resetScore() {
+    if (runGame) {
+        let oldScore = parseInt(document.getElementById('score').innerText);
+        document.getElementById('score').innerText = 0;
+        let oldWrongScore = parseInt(document.getElementById('incorrect').innerText);
+        document.getElementById('incorrect').innerText = 0;
+    }
 }
 
 function incrementScore() {

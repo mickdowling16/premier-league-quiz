@@ -19,7 +19,8 @@ body {
     height: 40px;
     font-size: 1.5rem;
     padding: 10px;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     
 
 }
@@ -195,3 +196,78 @@ body {
 .hide {
     display: none;
 }
+
+/* media queries for page responsiveness  */
+
+@media screen and (max-width: 750px) {
+    #rules {
+        height: 450px;
+    }
+ 
+ }
+
+@media screen and (max-width: 700px) {
+   #question {
+    padding: 20px;
+   }
+
+   #answer-buttons {
+    padding-top: 10px;
+    font-size: 1rem;
+   }
+
+}
+
+@media screen and (max-width: 500px) {
+    #question {
+     padding: 20px;
+     font-size: 1em;
+     width: 90%;
+     margin: auto;
+    }
+ 
+    #answer-buttons {
+     font-size: 1rem;
+    }
+
+    .btn {
+        height: 50px;
+        font-size: medium;
+    }
+
+    .scores {
+        font-size: small;
+    }
+    
+    .home-page-buttons {
+        height: 50px;
+        font-size: small;
+    }
+
+    #start-button {
+        font-size: medium;
+        padding: 0;
+    }
+
+    #rules-button {
+        font-size: medium;
+        padding: 0;
+    }
+
+    #next-button {
+        height: 50px;
+        font-size: medium;
+        padding: 0;
+    }
+
+    #start-from-rules {
+        height: 50px;
+        font-size: small;
+    }
+ }
+
+ @media screen and (max-width: 500px) { 
+    #rules {
+        height: 500px;
+    }
+ }
