@@ -85,7 +85,7 @@ function showScore() {
     }
 
     else if (parseInt(correctAnswerScore) + parseInt(incorrectAnswerScore) === 10 && parseInt(correctAnswerScore) > 7 && parseInt(correctAnswerScore) < 10) {
-        alert(`Congratulations! You finished top 4! You scored ${correctAnswerScore} out of 10. Keep practicing your Premier League skills`);
+        alert(`Congratulations! You finished top 4! You scored ${correctAnswerScore} out of 10. Keep practicing your Premier League skills and push for the title!`);
     }
 
     else if (parseInt(correctAnswerScore) + parseInt(incorrectAnswerScore) === 10 && parseInt(correctAnswerScore) < 7 && parseInt(correctAnswerScore) > 3) {
