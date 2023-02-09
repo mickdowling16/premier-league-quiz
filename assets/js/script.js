@@ -28,6 +28,7 @@ function runGame() {
     rulesDiv.classList.add('hide');
     currentQuestionIndex = 0
     nextQuestion();
+    showScore()
     resetScore();
 }
 
@@ -55,7 +56,7 @@ function showQuestion(question) {
 }
 
 function selectAnswer(e) {
-    let selectedButton = e.target
+    let selectedButton = e.target;
     let correct = selectedButton.dataset.correct
     setStatusClass(document.body, correct)
     Array.from(answerButtonsElement.children).forEach(button => {
@@ -74,6 +75,27 @@ function selectAnswer(e) {
         incrementWrongAnswer();
     }
   }
+
+function showScore() {
+    let correctAnswerScore = document.getElementById('score').innerText;
+    let incorrectAnswerScore = document.getElementById('incorrect').innerText;
+
+    if (parseInt(correctAnswerScore) + parseInt(incorrectAnswerScore) === 10 && parseInt(correctAnswerScore) === 10) {
+        alert(`Congratulations! Top of the league! You scored ${correctAnswerScore} out of 10. You're a Premier Legaue Quiz Master!`);
+    }
+
+    else if (parseInt(correctAnswerScore) + parseInt(incorrectAnswerScore) === 10 && parseInt(correctAnswerScore) > 7 && parseInt(correctAnswerScore) < 10) {
+        alert(`Congratulations! You finished top 4! You scored ${correctAnswerScore} out of 10. Keep practicing your Premier League skills`);
+    }
+
+    else if (parseInt(correctAnswerScore) + parseInt(incorrectAnswerScore) === 10 && parseInt(correctAnswerScore) < 7 && parseInt(correctAnswerScore) > 3) {
+        alert(`Keep Trying! Mid table. Not bad, not good. You scored ${correctAnswerScore} out of 10. You need more practising!`);
+    }
+
+    else if (parseInt(correctAnswerScore) + parseInt(incorrectAnswerScore) === 10 && parseInt(correctAnswerScore) < 3) {
+        alert(`Relegation! You scored a terrible ${correctAnswerScore} out of 10. You'll spend next season in the Championship!`);
+    }
+}
   
 function setStatusClass(element, Correct) {
     clearStatusClass(element)
