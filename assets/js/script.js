@@ -28,7 +28,7 @@ function runGame() {
     rulesDiv.classList.add('hide');
     currentQuestionIndex = 0
     nextQuestion();
-    showScore()
+    showScore();
     resetScore();
 }
 
@@ -62,6 +62,7 @@ function selectAnswer(e) {
     Array.from(answerButtonsElement.children).forEach(button => {
       setStatusClass(button, button.dataset.correct)
     })
+    
     if (questions.length > currentQuestionIndex + 1) {
       nextButton.classList.remove('hide')
     } else {
