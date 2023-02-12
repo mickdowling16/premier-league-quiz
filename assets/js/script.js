@@ -4,16 +4,22 @@ let gameArea = document.getElementById('game-area')
 let scoreArea = document.getElementById('score-area')
 let rulesButton = document.getElementById('rules-button')
 let rulesDiv = document.getElementById('rules');
-let startFromRules = document.getElementById('start-from-rules');
 
+let startFromRules = document.getElementById('start-from-rules');
+let showScoreButton = document.getElementById('show-score-button');
 let questionElement = document.getElementById('question');
 let answerButtonsElement = document.getElementById('answer-buttons');
 
 let currentQuestionIndex;
 
+
 startButton.addEventListener('click', runGame);
 rulesButton.addEventListener('click', showRules);
 startFromRules.addEventListener('click', runGame);
+showScoreButton.addEventListener('click', () => {
+    showScore()
+    runGame()
+  });
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     nextQuestion()
@@ -25,10 +31,10 @@ function runGame() {
     gameArea.classList.remove('hide');
     scoreArea.classList.remove('hide');
     rulesButton.classList.add('hide');
+    showScoreButton.classList.add('hide');
     rulesDiv.classList.add('hide');
     currentQuestionIndex = 0
     nextQuestion();
-    showScore();
     resetScore();
 }
 
@@ -58,16 +64,18 @@ function showQuestion(question) {
 function selectAnswer(e) {
     let selectedButton = e.target;
     let correct = selectedButton.dataset.correct
+    let showScore = document.getElementById('show-score-button');
     setStatusClass(document.body, correct)
     Array.from(answerButtonsElement.children).forEach(button => {
       setStatusClass(button, button.dataset.correct)
     })
-    
+
     if (questions.length > currentQuestionIndex + 1) {
       nextButton.classList.remove('hide')
     } else {
-      startButton.innerText = 'Restart'
-      startButton.classList.remove('hide')
+      startButton.classList.add('hide')
+      showScore.classList.remove('hide')
+
     }
     
     if (correct) {
@@ -93,7 +101,7 @@ function showScore() {
         alert(`Keep Trying! Mid table. Not bad, not good. You scored ${correctAnswerScore} out of 10. You need more practising!`);
     }
 
-    else if (parseInt(correctAnswerScore) + parseInt(incorrectAnswerScore) === 10 && parseInt(correctAnswerScore) < 3) {
+    else if (parseInt(correctAnswerScore) + parseInt(incorrectAnswerScore) === 10 && parseInt(correctAnswerScore) <= 3) {
         alert(`Relegation! You scored a terrible ${correctAnswerScore} out of 10. You'll spend next season in the Championship!`);
     }
 }
@@ -137,6 +145,16 @@ function incrementScore() {
 function incrementWrongAnswer() {
     let oldScore = parseInt(document.getElementById('incorrect').innerText);
     document.getElementById('incorrect').innerText = ++oldScore;
+}
+
+function finishGame() {
+    let gameArea = document.getElementById('question-area');
+    let start = document.getElementById('start-button');
+    let rules = document.getElementById('rules-button');
+
+    gameArea.classList.add('hide');
+    start.classList.remove('hide');
+    rules.classList.remove('hide');
 }
 
 let questions = [{ 
