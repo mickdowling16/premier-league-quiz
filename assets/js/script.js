@@ -47,6 +47,7 @@ function finishGame() {
     showScoreButton.classList.add('hide');
     rulesDiv.classList.add('hide');
     currentQuestionIndex = 0
+    clearStatusClass(document.body)
     resetScore();
 }
 
