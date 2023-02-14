@@ -1,3 +1,5 @@
+// global variables called in many different functions
+
 let startButton = document.getElementById('start-button')
 let nextButton = document.getElementById('next-button')
 let gameArea = document.getElementById('game-area')
@@ -12,6 +14,7 @@ let answerButtonsElement = document.getElementById('answer-buttons');
 
 let currentQuestionIndex;
 
+// event listeners to trigger funtions when buttons clicked
 
 startButton.addEventListener('click', runGame);
 rulesButton.addEventListener('click', showRules);
@@ -24,6 +27,8 @@ nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     nextQuestion()
   });
+
+// runs game when start button is clicked
 
 function runGame() {
     console.log("started");
@@ -38,8 +43,10 @@ function runGame() {
     resetScore();
 }
 
+// finishes game after last question and returns user to home screen
+
 function finishGame() {
-    console.log("started");
+    console.log("Game over");
     startButton.classList.remove('hide');
     gameArea.classList.add('hide');
     scoreArea.classList.add('hide');
@@ -51,14 +58,20 @@ function finishGame() {
     resetScore();
 }
 
+// shows rules div when button is clicked
+
 function showRules() {
     rulesDiv.classList.remove('hide');
 }
+
+// calls next question 
 
 function nextQuestion() {
     resetQuiz()
     showQuestion(questions[currentQuestionIndex])
 }
+
+// shows next question and clears previous question answers
 
 function showQuestion(question) {
     questionElement.innerText = question.question;
@@ -73,6 +86,8 @@ function showQuestion(question) {
         answerButtonsElement.appendChild(button)
       })
 }
+
+// gives answer when user clicks a button, increments correct or incorrect score
 
 function selectAnswer(e) {
     let selectedButton = e.target;
@@ -98,6 +113,8 @@ function selectAnswer(e) {
     }
   }
 
+//   show alert with different message depending on user score
+
 function showScore() {
     let correctAnswerScore = document.getElementById('score').innerText;
     let incorrectAnswerScore = document.getElementById('incorrect').innerText;
@@ -118,6 +135,8 @@ function showScore() {
         alert(`Relegation! You scored a terrible ${correctAnswerScore} out of 10. You'll spend next season in the Championship!`);
     }
 }
+
+// change colour of buttons depending on answer WebGLActiveInfo. Red for wrong green for correct
   
 function setStatusClass(element, Correct) {
     clearStatusClass(element)
@@ -128,10 +147,14 @@ function setStatusClass(element, Correct) {
     }
   }
   
+// Clear classes of colour when new question is loaded
+
   function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
   }
+
+// reset answers after every question 
 
 function resetQuiz() {
     clearStatusClass(document.body)
@@ -140,6 +163,8 @@ function resetQuiz() {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild)
       }
 }
+
+// reset the score when a new game is played
 
 function resetScore() {
     if (runGame) {
@@ -150,6 +175,8 @@ function resetScore() {
     }
 }
 
+// Increment correct and incorrect scores 
+
 function incrementScore() {
     let oldScore = parseInt(document.getElementById('score').innerText);
     document.getElementById('score').innerText = ++oldScore;
@@ -159,6 +186,8 @@ function incrementWrongAnswer() {
     let oldScore = parseInt(document.getElementById('incorrect').innerText);
     document.getElementById('incorrect').innerText = ++oldScore;
 }
+
+// question arrays
 
 let questions = [{ 
     id: 0,
