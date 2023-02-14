@@ -18,7 +18,7 @@ rulesButton.addEventListener('click', showRules);
 startFromRules.addEventListener('click', runGame);
 showScoreButton.addEventListener('click', () => {
     showScore()
-    runGame()
+    finishGame()
   });
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
@@ -35,6 +35,18 @@ function runGame() {
     rulesDiv.classList.add('hide');
     currentQuestionIndex = 0
     nextQuestion();
+    resetScore();
+}
+
+function finishGame() {
+    console.log("started");
+    startButton.classList.remove('hide');
+    gameArea.classList.add('hide');
+    scoreArea.classList.add('hide');
+    rulesButton.classList.remove('hide');
+    showScoreButton.classList.add('hide');
+    rulesDiv.classList.add('hide');
+    currentQuestionIndex = 0
     resetScore();
 }
 
@@ -145,16 +157,6 @@ function incrementScore() {
 function incrementWrongAnswer() {
     let oldScore = parseInt(document.getElementById('incorrect').innerText);
     document.getElementById('incorrect').innerText = ++oldScore;
-}
-
-function finishGame() {
-    let gameArea = document.getElementById('question-area');
-    let start = document.getElementById('start-button');
-    let rules = document.getElementById('rules-button');
-
-    gameArea.classList.add('hide');
-    start.classList.remove('hide');
-    rules.classList.remove('hide');
 }
 
 let questions = [{ 

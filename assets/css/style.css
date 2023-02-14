@@ -91,6 +91,13 @@ body {
     font-family: Rubik;
 }
 
+#show-score-button {
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 2rem;
+    font-family: Rubik;
+}
+
 #next-button {
     font-weight: bold;
     padding: 5px 10px;
@@ -250,6 +257,11 @@ body {
     }
 
     #rules-button {
+        font-size: medium;
+        padding: 0;
+    }
+
+    #show-score-button {
         font-size: medium;
         padding: 0;
     }
