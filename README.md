@@ -44,6 +44,21 @@ The font used in this project was Rubik. I thing this is an astheically pleasing
 
 The only media used in this project is the Premier League logo which appears at the top of the page. This was taken from the offical premier league website and will be linked in my credits section below
 
+---
+
+## Features
+
+My quiz site is made up of just one html page which changes when prompted by the user using javascript and css. 
+
+### Start Page
+
+This is the first screen a user will see when loading the quiz. There is a start button and a quiz rules button. 
+
+![start screen of quiz](./documentation/start-screen.PNG)
+
+### Quiz Rules 
+
+When the quiz rules button is clicked the rules div shows containing the text with general rules for the game. From here a user can start the quiz directly.
 
 ### Bugs
 
