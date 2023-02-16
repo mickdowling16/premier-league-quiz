@@ -83,8 +83,50 @@ When the show score button is clicked this alert pops up with a message. The qui
 
 ![score alert](./documentation/score-alert.PNG)
 
+---
+
+## Accessibility
+
+To make my quiz more accessable I made sure that;
+- Using semantic HTML.
+- Using alt attributes on any images I used in the quiz.
+- Making sure that there is a sufficient colour contrast in the quiz so that the questions and answers are easily readable.
+
+---
+
+## Testing 
+
+### Validator Testing
+
+Throughout this project I made sure to run my code through validators to make sure there were no errors or warnings. I did this for my HTML, CSS and JavaScript code. The results are linked below
+
+- link to HTML validator results
+- link to css validator results
+- link to javascript validator results
+
 ### Bugs
 
-I ran into a bug when adding the score counter to my quiz. A user is able to keep clicking the correct answer before clicking the next button and increasing their correct score counter as many as they would like. This is obviously a big issue as the user can skew their results. 
+### Solved Bugs
+
+1. I ran into a bug when adding the score counter to my quiz. A user is able to keep clicking the correct answer before clicking the next button and increasing their correct score counter as many as they would like. This is obviously a big issue as the user can skew their results. 
 
 To fix this issue my first thought is to remove the next question button and have the quiz automatically load the next question when the answer is given. This removes the oppertunity for a user to keep submitting their answer ad increasing the scores.
+
+
+### Lighthouse
+
+I used lighthouse to test the performance of my quiz to make sure it loaded fast and had no errors in accessability and performance. As this is just a one page site, the testing was short. Results are below.
+
+### User Stories
+
+- write solutions to user stories in this area
+
+### Responsiveness
+
+It is important for my quiz to be responsive on many different device sizes as quizes are usually sent to friends and family and people will play the quiz on all different devices.
+
+#### Mobile
+
+
+#### Tablet
+
