@@ -4,6 +4,8 @@
 
 The objective of this project was to create a fun premier league quiz to test the users knowledge of past and present premier league stats and find the true Premier league quiz master! The aim when designing this quiz was to make it easy to use and navigate for the user and to provide feedback on the correct answer and a score counter.
 
+---
+
 ## User Stories
 
 ### Client Goals
@@ -25,6 +27,23 @@ The objective of this project was to create a fun premier league quiz to test th
 - To be met with a variety of random questions in each new game
 - To be able to see other users scores on a highscore table
 - For each game to be different
+
+---
+
+## Design
+
+For the design of this quiz I used the official Premier League colours and logo to keep it all relevant to the quiz topic. The primary colour of pink is used as the page background with the purple premier league logo and light blue for the button colours. Each time a question is answered the page background changes to either green or red depending on a correct or incorrect answer. 
+
+![Premier League Colour Palette](./documentation/premier-league-colour-palette.webp)
+
+### Typography
+
+The font used in this project was Rubik. I thing this is an astheically pleasing font and it is easy to read and looks clean. This worked perfect for my intended use. I used Google fonts for this.
+
+### Media
+
+The only media used in this project is the Premier League logo which appears at the top of the page. This was taken from the offical premier league website and will be linked in my credits section below
+
 
 ### Bugs
 
