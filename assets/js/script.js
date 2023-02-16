@@ -6,6 +6,7 @@ let gameArea = document.getElementById('game-area')
 let scoreArea = document.getElementById('score-area')
 let rulesButton = document.getElementById('rules-button')
 let rulesDiv = document.getElementById('rules');
+let logo = document.getElementById('logo-div');
 
 let startFromRules = document.getElementById('start-from-rules');
 let showScoreButton = document.getElementById('show-score-button');
@@ -38,6 +39,7 @@ function runGame() {
     rulesButton.classList.add('hide');
     showScoreButton.classList.add('hide');
     rulesDiv.classList.add('hide');
+    logo.classList.remove('hide');
     currentQuestionIndex = 0
     nextQuestion();
     resetScore();
@@ -62,6 +64,7 @@ function finishGame() {
 
 function showRules() {
     rulesDiv.classList.remove('hide');
+    logo.classList.add('hide');
 }
 
 // calls next question 
@@ -123,7 +126,7 @@ function showScore() {
         alert(`Congratulations! Top of the league! You scored ${correctAnswerScore} out of 10. You're a Premier Legaue Quiz Master!`);
     }
 
-    else if (parseInt(correctAnswerScore) + parseInt(incorrectAnswerScore) === 10 && parseInt(correctAnswerScore) > 7 && parseInt(correctAnswerScore) < 10) {
+    else if (parseInt(correctAnswerScore) + parseInt(incorrectAnswerScore) === 10 && parseInt(correctAnswerScore) >= 7 && parseInt(correctAnswerScore) < 10) {
         alert(`Congratulations! You finished top 4! You scored ${correctAnswerScore} out of 10. Keep practicing your Premier League skills and push for the title!`);
     }
 

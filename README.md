@@ -60,6 +60,29 @@ This is the first screen a user will see when loading the quiz. There is a start
 
 When the quiz rules button is clicked the rules div shows containing the text with general rules for the game. From here a user can start the quiz directly.
 
+![quiz rules](./documentation/quiz-rules.PNG)
+
+### Questions
+
+When the quiz is started a random question will appear in the game area with 4 possible answers. The correct and incorrect scores are counted and the correct answer is given after the user submits an answer
+
+![quiz questions](./documentation/questions.PNG)
+
+When an answer is submitted the buttons and background change colour to indicate correct or incorrect
+
+![incorrect answer](./documentation/incorrect-answer.PNG)
+![correct answer](./documentation/correct-answer.PNG)
+
+### Show Score
+
+After the answer is given for question 10 the next button changes to show score. This sends an alert with the players score and a message depending on how many they scored out of 10.
+
+![show score button](./documentation/show-score.PNG)
+
+When the show score button is clicked this alert pops up with a message. The quiz the resets and brings the user back to the start screen 
+
+![score alert](./documentation/score-alert.PNG)
+
 ### Bugs
 
 I ran into a bug when adding the score counter to my quiz. A user is able to keep clicking the correct answer before clicking the next button and increasing their correct score counter as many as they would like. This is obviously a big issue as the user can skew their results. 
