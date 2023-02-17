@@ -67,14 +67,14 @@ function showRules() {
     logo.classList.add('hide');
 }
 
-// calls next question 
+// shows next question and clears previous question answers
 
 function nextQuestion() {
     resetQuiz()
     showQuestion(questions[Math.floor(Math.random() * questions.length)])
 }
 
-// shows next question and clears previous question answers
+// Shows questions in question area
 
 function showQuestion(question) {
     questionElement.innerText = question.question;
@@ -101,19 +101,19 @@ function selectAnswer(e) {
       setStatusClass(button, button.dataset.correct)
     })
 
-    if (questions.length > currentQuestionIndex + 21) {
-      nextButton.classList.remove('hide')
-    } else {
-      startButton.classList.add('hide')
-      showScore.classList.remove('hide')
+        if (questions.length > currentQuestionIndex + 21) {
+            nextButton.classList.remove('hide')
+            } else {
+            startButton.classList.add('hide')
+             showScore.classList.remove('hide')
 
-    }
-    
-    if (correct) {
-        incrementScore();
-    } else {
-        incrementWrongAnswer();
-    }
+         }
+
+            if (correct) {
+                incrementScore();
+            } else {
+                incrementWrongAnswer();
+         }
   }
 
 //   show alert with different message depending on user score
