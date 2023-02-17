@@ -71,7 +71,7 @@ function showRules() {
 
 function nextQuestion() {
     resetQuiz()
-    showQuestion(questions[currentQuestionIndex])
+    showQuestion(questions[Math.floor(Math.random() * questions.length)])
 }
 
 // shows next question and clears previous question answers
@@ -101,7 +101,7 @@ function selectAnswer(e) {
       setStatusClass(button, button.dataset.correct)
     })
 
-    if (questions.length > currentQuestionIndex + 1) {
+    if (questions.length > currentQuestionIndex + 21) {
       nextButton.classList.remove('hide')
     } else {
       startButton.classList.add('hide')
