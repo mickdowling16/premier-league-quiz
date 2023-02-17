@@ -291,5 +291,205 @@ let questions = [{
         { text: "West Ham United", correct: false }
     ]
 
+},
+{
+    id: 10,
+    question: "Who holds the record for most Premier League clubs managed? ",
+    answers: [{ text: "Harry Rednapp", correct: false },
+        { text: "Tony Pulis", correct: false },
+        { text: "Sam Allardyce", correct: true },
+        { text: "Steve Bruce", correct: false }
+    ]
+
+},
+{
+    id: 11,
+    question: "Who holds the record for most Premier League goals in a calendar year?",
+    answers: [{ text: "Mohamed Salah", correct: false },
+        { text: "Alan Shearer", correct: false },
+        { text: "Andy Cole", correct: false },
+        { text: "Harry Kane", correct: true }
+    ]
+
+},
+{
+    id: 12,
+    question: "Who holds the record for most Premier League Golden Boot awards?",
+    answers: [{ text: "Alan Shearer", correct: false },
+        { text: "Harry Kane", correct: false },
+        { text: "Thierry Henry", correct: true },
+        { text: "Michael Owen", correct: false }
+    ]
+
+},
+{
+    id: 13,
+    question: "Who holds the record for most Premier League headed goals",
+    answers: [{ text: "Harry Kane", correct: false },
+        { text: "Didier Drogba", correct: false },
+        { text: "Peter Crouch", correct: true },
+        { text: "Romelu Lukaku", correct: false }
+    ]
+
+},
+{
+    id: 14,
+    question: "Who holds the record for all time penalty saves in the Premier League",
+    answers: [{ text: "Lukas Fabianski", correct: true },
+        { text: "Joe Hart", correct: false },
+        { text: "Hugo Lloris", correct: false },
+        { text: "Shay Given", correct: false }
+    ]
+
+},
+{
+    id: 15,
+    question: "Which of these players has hit the woodwork the most this season",
+    answers: [{ text: "Joelinton", correct: false },
+        { text: "Kai Havertz", correct: false },
+        { text: "Son Heung-Min", correct: false },
+        { text: "Darwin Nunez", correct: true }
+    ]
+
+},
+{
+    id: 16,
+    question: "What is the current capacity of Old Trafford, home of Manchester United",
+    answers: [{ text: "76,427", correct: false },
+        { text: "81,752", correct: false },
+        { text: "71,755", correct: false },
+        { text: "74,310", correct: true }
+    ]
+
+},
+{
+    id: 17,
+    question: "Who was the top scorer in the Premier League first ever season of 1992/93?",
+    answers: [{ text: "Alan Shearer", correct: false },
+        { text: "Teddy Sheringham", correct: true },
+        { text: "Dean Holdsworth", correct: false },
+        { text: "Les Ferdinand", correct: false }
+    ]
+
+},
+{
+    id: 18,
+    question: "Which player won the PFA Player of the Year Award in the opening Premier League season of 92/93?",
+    answers: [{ text: "Paul McGrath", correct: true },
+        { text: "Gary Speed", correct: false },
+        { text: "Paul Ince", correct: false },
+        { text: "Chris Waddle", correct: false }
+    ]
+
+},
+{
+    id: 19,
+    question: "Who scored the 20,000th Premier League goal in the 2011/12 season?",
+    answers: [{ text: "Robin Van Persie", correct: false },
+        { text: "Clint Dempsey", correct: false },
+        { text: "Danny Graham", correct: false },
+        { text: "Marc Albrighton", correct: true }
+    ]
+
+},
+{
+    id: 20,
+    question: "Arsenal's last match at Highbury took place in 2005/06, but who was it against?",
+    answers: [{ text: "Wigan Athletic", correct: true },
+        { text: "Bolton Wanderers", correct: false },
+        { text: "Blackburn Rovers", correct: false },
+        { text: "Newcastle United", correct: false }
+    ]
+
+},
+{
+    id: 21,
+    question: "Which country has provided the most players to the Premier League outside of England?",
+    answers: [{ text: "Spain", correct: false },
+        { text: "France", correct: true },
+        { text: "Brazil", correct: false },
+        { text: "Germany", correct: false }
+    ]
+
+},
+{
+    id: 22,
+    question: "3 of these teams got relagated in the 2013/14 season, which didn't?",
+    answers: [{ text: "Cardiff City", correct: false },
+        { text: "Fulham", correct: false },
+        { text: "West Brom", correct: true },
+        { text: "Norwich City", correct: false }
+    ]
+
+},
+{
+    id: 23,
+    question: "Which team finished runner up in the 2008/09 season",
+    answers: [{ text: "Manchester United", correct: false },
+        { text: "Liverpool", correct: true },
+        { text: "Chelsea", correct: false },
+        { text: "Arsenal", correct: false }
+    ]
+
+},
+{
+    id: 24,
+    question: "Jamie Vardy holds the record for most goals in consecutive games, how many goals did he score?",
+    answers: [{ text: "10", correct: false },
+        { text: "12", correct: false },
+        { text: "11", correct: true },
+        { text: "14", correct: false }
+    ]
+
+},
+{
+    id: 25,
+    question: "Who was the oldest Premier League manager to take charge of a match?",
+    answers: [{ text: "Roy Hodgson", correct: true },
+        { text: "Bobby Robson", correct: false },
+        { text: "Alex Ferguson", correct: false },
+        { text: "Neil Warnock", correct: false }
+    ]
+
+},
+{
+    id: 26,
+    question: "Who was the youngest player to ever play in the Premier League",
+    answers: [{ text: "Jack Wilshere", correct: false },
+        { text: "Harvey Elliott", correct: false },
+        { text: "Isaiah Brown", correct: false },
+        { text: "Ethan Nwaneri", correct: true }
+    ]
+
+},
+{
+    id: 27,
+    question: "Who was the oldest player to play in the Premier League",
+    answers: [{ text: "Edwin van der Sar", correct: false },
+        { text: "Mark Schwarzer", correct: false },
+        { text: "Brad Friedel", correct: false },
+        { text: "John Burridge", correct: true }
+    ]
+
+},
+{
+    id: 28,
+    question: "Which of these players is one of only 2 players to score a penalty with both feet",
+    answers: [{ text: "Peter Odemwingie", correct: false },
+        { text: "Steven Gerard", correct: false },
+        { text: "Bobby Zamora", correct: true },
+        { text: "Dennis Bergkamp ", correct: false }
+    ]
+
+},
+{
+    id: 29,
+    question: "Who is the most substituted player in Premier League history",
+    answers: [{ text: "Gareth Barry", correct: false },
+        { text: "Ryan Giggs", correct: true },
+        { text: "John Obi Mikel", correct: false },
+        { text: "Mark Noble", correct: false }
+    ]
+
 }
 ]
