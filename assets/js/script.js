@@ -122,20 +122,20 @@ function showScore() {
     let correctAnswerScore = document.getElementById('score').innerText;
     let incorrectAnswerScore = document.getElementById('incorrect').innerText;
 
-    if (parseInt(correctAnswerScore) + parseInt(incorrectAnswerScore) === 10 && parseInt(correctAnswerScore) === 10) {
-        alert(`Congratulations! Top of the league! You scored ${correctAnswerScore} out of 10. You're a Premier Legaue Quiz Master!`);
+    if (parseInt(correctAnswerScore) + parseInt(incorrectAnswerScore) === 100 && parseInt(correctAnswerScore) === 100) {
+        alert(`Congratulations! Top of the league! You scored ${correctAnswerScore} points. You're a Premier Legaue Quiz Master!`);
     }
 
-    else if (parseInt(correctAnswerScore) + parseInt(incorrectAnswerScore) === 10 && parseInt(correctAnswerScore) >= 7 && parseInt(correctAnswerScore) < 10) {
-        alert(`Congratulations! You finished top 4! You scored ${correctAnswerScore} out of 10. Keep practicing your Premier League skills and push for the title!`);
+    else if (parseInt(correctAnswerScore) + parseInt(incorrectAnswerScore) === 100 && parseInt(correctAnswerScore) >= 70 && parseInt(correctAnswerScore) < 100) {
+        alert(`Congratulations! You finished top 4! You scored ${correctAnswerScore} points. Keep practicing your Premier League skills and push for the title!`);
     }
 
-    else if (parseInt(correctAnswerScore) + parseInt(incorrectAnswerScore) === 10 && parseInt(correctAnswerScore) < 7 && parseInt(correctAnswerScore) > 3) {
-        alert(`Keep Trying! Mid table. Not bad, not good. You scored ${correctAnswerScore} out of 10. You need more practising!`);
+    else if (parseInt(correctAnswerScore) + parseInt(incorrectAnswerScore) === 100 && parseInt(correctAnswerScore) < 70 && parseInt(correctAnswerScore) > 30) {
+        alert(`Keep Trying! You finished mid table, but had a decent cup run. You scored ${correctAnswerScore} points. You need more hours on the training pitch!`);
     }
 
-    else if (parseInt(correctAnswerScore) + parseInt(incorrectAnswerScore) === 10 && parseInt(correctAnswerScore) <= 3) {
-        alert(`Relegation! You scored a terrible ${correctAnswerScore} out of 10. You'll spend next season in the Championship!`);
+    else if (parseInt(correctAnswerScore) + parseInt(incorrectAnswerScore) === 100 && parseInt(correctAnswerScore) <= 30) {
+        alert(`Relegation! You finished in the bottom 3 with only ${correctAnswerScore} points. You'll spend next season in the Championship!`);
     }
 }
 
@@ -182,12 +182,12 @@ function resetScore() {
 
 function incrementScore() {
     let oldScore = parseInt(document.getElementById('score').innerText);
-    document.getElementById('score').innerText = ++oldScore;
+    document.getElementById('score').innerText = oldScore += 10;
 }
 
 function incrementWrongAnswer() {
     let oldScore = parseInt(document.getElementById('incorrect').innerText);
-    document.getElementById('incorrect').innerText = ++oldScore;
+    document.getElementById('incorrect').innerText = oldScore += 10;
 }
 
 // question arrays
