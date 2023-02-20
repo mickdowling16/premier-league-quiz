@@ -1,0 +1,1 @@
+![javascript validator results](../documentation/js-validator-check.PNG)

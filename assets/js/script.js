@@ -1,10 +1,10 @@
-// global variables called in many different functions
+/*jshint esversion: 6 */
 
-let startButton = document.getElementById('start-button')
-let nextButton = document.getElementById('next-button')
-let gameArea = document.getElementById('game-area')
-let scoreArea = document.getElementById('score-area')
-let rulesButton = document.getElementById('rules-button')
+let startButton = document.getElementById('start-button');
+let nextButton = document.getElementById('next-button');
+let gameArea = document.getElementById('game-area');
+let scoreArea = document.getElementById('score-area');
+let rulesButton = document.getElementById('rules-button');
 let rulesDiv = document.getElementById('rules');
 let logo = document.getElementById('logo-div');
 
@@ -21,12 +21,12 @@ startButton.addEventListener('click', runGame);
 rulesButton.addEventListener('click', showRules);
 startFromRules.addEventListener('click', runGame);
 showScoreButton.addEventListener('click', () => {
-    showScore()
-    finishGame()
+    showScore();
+    finishGame();
 });
 nextButton.addEventListener('click', () => {
-    currentQuestionIndex++
-    nextQuestion()
+    currentQuestionIndex++;
+    nextQuestion();
 });
 
 // runs game when start button is clicked
@@ -38,9 +38,10 @@ function runGame() {
     scoreArea.classList.remove('hide');
     rulesButton.classList.add('hide');
     showScoreButton.classList.add('hide');
+    document.getElementById('question-area').classList.remove('hide');
     rulesDiv.classList.add('hide');
     logo.classList.remove('hide');
-    currentQuestionIndex = 0
+    currentQuestionIndex = 0;
     nextQuestion();
     resetScore();
 }
@@ -55,8 +56,8 @@ function finishGame() {
     rulesButton.classList.remove('hide');
     showScoreButton.classList.add('hide');
     rulesDiv.classList.add('hide');
-    currentQuestionIndex = 0
-    clearStatusClass(document.body)
+    currentQuestionIndex = 0;
+    clearStatusClass(document.body);
     resetScore();
 }
 
@@ -65,13 +66,14 @@ function finishGame() {
 function showRules() {
     rulesDiv.classList.remove('hide');
     logo.classList.add('hide');
+    document.getElementById('question-area').classList.add('hide');
 }
 
 // shows next question and clears previous question answers
 
 function nextQuestion() {
-    resetQuiz()
-    showQuestion(questions[Math.floor(Math.random() * questions.length)])
+    resetQuiz();
+    showQuestion(questions[Math.floor(Math.random() * questions.length)]);
 }
 
 // Shows questions in question area
@@ -79,33 +81,33 @@ function nextQuestion() {
 function showQuestion(question) {
     questionElement.innerText = question.question;
     question.answers.forEach(answer => {
-        const button = document.createElement('button')
-        button.innerText = answer.text
-        button.classList.add('btn')
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn');
         if (answer.correct) {
-            button.dataset.correct = answer.correct
+            button.dataset.correct = answer.correct;
         }
-        button.addEventListener('click', selectAnswer)
-        answerButtonsElement.appendChild(button)
-    })
+        button.addEventListener('click', selectAnswer);
+        answerButtonsElement.appendChild(button);
+    });
 }
 
 // gives answer when user clicks a button, increments correct or incorrect score
 
 function selectAnswer(e) {
     let selectedButton = e.target;
-    let correct = selectedButton.dataset.correct
+    let correct = selectedButton.dataset.correct;
     let showScore = document.getElementById('show-score-button');
-    setStatusClass(document.body, correct)
+    setStatusClass(document.body, correct);
     Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
-    })
+        setStatusClass(button, button.dataset.correct);
+    });
 
     if (questions.length > currentQuestionIndex + 21) {
-        nextButton.classList.remove('hide')
+        nextButton.classList.remove('hide');
     } else {
-        startButton.classList.add('hide')
-        showScore.classList.remove('hide')
+        startButton.classList.add('hide');
+        showScore.classList.remove('hide');
 
     }
 
@@ -136,7 +138,7 @@ function showScore() {
 // change colour of buttons depending on answer WebGLActiveInfo. Red for wrong green for correct
 
 function setStatusClass(element, Correct) {
-    clearStatusClass(element)
+    clearStatusClass(element);
     if (Correct) {
         element.classList.add('correct');
     } else {
@@ -147,17 +149,17 @@ function setStatusClass(element, Correct) {
 // Clear classes of colour when new question is loaded
 
 function clearStatusClass(element) {
-    element.classList.remove('correct')
-    element.classList.remove('wrong')
+    element.classList.remove('correct');
+    element.classList.remove('wrong');
 }
 
 // reset answers after every question 
 
 function resetQuiz() {
-    clearStatusClass(document.body)
+    clearStatusClass(document.body);
     nextButton.classList.add('hide');
     while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
 }
 
@@ -165,9 +167,9 @@ function resetQuiz() {
 
 function resetScore() {
     if (runGame) {
-        let oldScore = parseInt(document.getElementById('score').innerText);
+        parseInt(document.getElementById('score').innerText);
         document.getElementById('score').innerText = 0;
-        let oldWrongScore = parseInt(document.getElementById('incorrect').innerText);
+        parseInt(document.getElementById('incorrect').innerText);
         document.getElementById('incorrect').innerText = 0;
     }
 }
@@ -846,4 +848,4 @@ let questions = [{
         ]
 
     }
-]
+];

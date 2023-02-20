@@ -117,11 +117,12 @@ body {
     background-color: white;
     width: 800px;
     width: 80%;
+    margin: auto;
     height: 350px;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
-    bottom: 50;
+    bottom: 50px;
     margin-top: 200px;
     position: absolute;
     z-index: 1;
@@ -136,6 +137,9 @@ body {
 #rules p {
     text-align: center;
     font-size: 1.2rem;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 20px;
 }
 
 #start-from-rules {
@@ -292,5 +296,12 @@ body {
 @media screen and (max-width: 500px) {
     #rules {
         height: 500px;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #rules p {
+        font-size: 1rem;
     }
 }
