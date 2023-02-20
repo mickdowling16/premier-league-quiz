@@ -53,16 +53,16 @@ body {
 /* button styling */
 .button-grid {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(1, auto);
     gap: 10px;
     margin: 20px 0;
     
 }
 
 .btn {
-    height: 100px;
+    height: 60px;
     background-color: #04f5ff;
-    border-radius: 5px;
+    border-radius: 50px;
     border: none;
     font-size: 1.5rem;
     font-family: Rubik;
@@ -75,9 +75,10 @@ body {
 }
 
 .control-buttons {
-    height: 100px;
+    display: inline-block;
+    height: 60px;
     background-color: #04f5ff;
-    border-radius: 5px;
+    border-radius: 50px;
     border-color: black;
     font-size: 1.5rem;
     width: 40%;
