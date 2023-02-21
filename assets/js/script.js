@@ -1,20 +1,18 @@
 /*jshint esversion: 6 */
 
-let startButton = document.getElementById('start-button');
-let nextButton = document.getElementById('next-button');
-let gameArea = document.getElementById('game-area');
-let scoreArea = document.getElementById('score-area');
-let rulesButton = document.getElementById('rules-button');
-let rulesDiv = document.getElementById('rules');
-let logo = document.getElementById('logo-div');
-
-let startFromRules = document.getElementById('start-from-rules');
-let showScoreButton = document.getElementById('show-score-button');
-let questionElement = document.getElementById('question');
-let answerButtonsElement = document.getElementById('answer-buttons');
+const startButton = document.getElementById('start-button');
+const nextButton = document.getElementById('next-button');
+const gameArea = document.getElementById('game-area');
+const scoreArea = document.getElementById('score-area');
+const rulesButton = document.getElementById('rules-button');
+const rulesDiv = document.getElementById('rules');
+const startFromRules = document.getElementById('start-from-rules');
+const showScoreButton = document.getElementById('show-score-button');
+const questionElement = document.getElementById('question');
+const answerButtonsElement = document.getElementById('answer-buttons');
 
 let currentQuestionIndex;
-
+let maxQuestions = 10;
 // event listeners to trigger funtions when buttons clicked
 
 startButton.addEventListener('click', runGame);
@@ -40,7 +38,7 @@ function runGame() {
     showScoreButton.classList.add('hide');
     document.getElementById('question-area').classList.remove('hide');
     rulesDiv.classList.add('hide');
-    logo.classList.remove('hide');
+    document.getElementById('logo-div').classList.remove('hide');
     currentQuestionIndex = 0;
     nextQuestion();
     resetScore();
@@ -65,7 +63,7 @@ function finishGame() {
 
 function showRules() {
     rulesDiv.classList.remove('hide');
-    logo.classList.add('hide');
+    document.getElementById('logo-div').classList.add('hide');
     document.getElementById('question-area').classList.add('hide');
 }
 
@@ -73,7 +71,12 @@ function showRules() {
 
 function nextQuestion() {
     resetQuiz();
-    showQuestion(questions[Math.floor(Math.random() * questions.length)]);
+    const questionIndex = Math.floor(Math.random() * questions.length);
+    displayedQuestion = questions[questionIndex];
+    showQuestion(displayedQuestion);
+    questions.splice(questionIndex, 1);
+
+
 }
 
 // Shows questions in question area
@@ -103,12 +106,11 @@ function selectAnswer(e) {
         setStatusClass(button, button.dataset.correct);
     });
 
-    if (questions.length > currentQuestionIndex + 21) {
+    if (currentQuestionIndex < 9) {
         nextButton.classList.remove('hide');
     } else {
         startButton.classList.add('hide');
         showScore.classList.remove('hide');
-
     }
 
     if (correct) {
