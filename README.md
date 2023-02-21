@@ -110,9 +110,9 @@ Throughout this project I made sure to run my code through validators to make su
 
 1. I ran into a bug when adding the score counter to my quiz. A user is able to keep clicking the correct answer before clicking the next button and increasing their correct score counter as many as they would like. This is obviously a big issue as the user can skew their results. I was unsure of how to fix this bug.
 
-2. Another bug I have is that my quiz asks 10 random questions but sometimes the question can repeat. I was working to fix this problem for days and looked up many different methods. I tried to use the splice funtion to remove teh question from the array when it had been asked but could not figure out how to do it. I tried entering it in multiple different funtions but nothing seemed to work. I was unable to spend anymore time on this section of the quiz and unfortunately had to move on
-
 ### Solved Bugs
+
+1. A bug that I ran into when coding my website was that I was able to randomise my questions but the same question could appear 2 or 3 times in one quiz. This was caused by the question in the array being randomly called multiple times. This problem took me a while to fix and it couldn't get the hang of it. I eventually solved it by assigning the random number I was generating for the question array a variable and using this variable to splice that question from the array so it wouldn't be asked again. Where I was having trouble with this was that I wasn't setting this random number as a variable so I couldn't call it again in my splice. The bug is now fixed and the quiz is working correctly as intended
 
 
 
