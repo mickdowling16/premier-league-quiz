@@ -67,7 +67,7 @@ function showRules() {
     document.getElementById('question-area').classList.add('hide');
 }
 
-// shows next question and clears previous question answers
+// shows next random question. Removes duplicate question from array using splice
 
 function nextQuestion() {
     resetQuiz();
@@ -75,11 +75,9 @@ function nextQuestion() {
     displayedQuestion = questions[questionIndex];
     showQuestion(displayedQuestion);
     questions.splice(questionIndex, 1);
-
-
 }
 
-// Shows questions in question area
+// Populates the question area with questions and answers from the array
 
 function showQuestion(question) {
     questionElement.innerText = question.question;
