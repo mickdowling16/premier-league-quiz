@@ -25,6 +25,7 @@ showScoreButton.addEventListener('click', () => {
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     nextQuestion();
+    clicked = false;
 });
 
 // runs game when start button is clicked
@@ -78,6 +79,7 @@ function nextQuestion() {
 }
 
 // Populates the question area with questions and answers from the array
+let clicked = false
 
 function showQuestion(question) {
     questionElement.innerText = question.question;
@@ -88,7 +90,7 @@ function showQuestion(question) {
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
-        button.addEventListener('click', selectAnswer);
+        button.addEventListener('click', selectAnswer); 
         answerButtonsElement.appendChild(button);
     });
 }
@@ -103,19 +105,18 @@ function selectAnswer(e) {
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
     });
-
     if (currentQuestionIndex < 9) {
         nextButton.classList.remove('hide');
     } else {
         startButton.classList.add('hide');
         showScore.classList.remove('hide');
     }
-
     if (correct) {
         incrementScore();
     } else {
         incrementWrongAnswer();
     }
+    clicked = true
 }
 
 //   show alert with different message depending on user score
@@ -178,12 +179,16 @@ function resetScore() {
 
 function incrementScore() {
     let oldScore = parseInt(document.getElementById('score').innerText);
+    if (clicked === false) {
     document.getElementById('score').innerText = oldScore += 10;
+}
 }
 
 function incrementWrongAnswer() {
     let oldScore = parseInt(document.getElementById('incorrect').innerText);
+    if (clicked === false) {
     document.getElementById('incorrect').innerText = oldScore += 10;
+}
 }
 
 // question arrays
@@ -322,7 +327,7 @@ let questions = [{
     },
     {
         id: 6,
-        question: "Who finished top goal scorer in the 2003/2004 Premier League season",
+        question: "Who finished top goal scorer in the 2003/2004 Premier League season?",
         answers: [{
                 text: "Thierry Henry",
                 correct: true
@@ -344,7 +349,7 @@ let questions = [{
     },
     {
         id: 7,
-        question: "Who won the 2006/2007 Premier League goal of the season",
+        question: "Who won the 2006/2007 Premier League goal of the season?",
         answers: [{
                 text: "Cristiano Ronaldo",
                 correct: false
@@ -366,7 +371,7 @@ let questions = [{
     },
     {
         id: 8,
-        question: "Who won the PFA Player of the year in 2011/2012",
+        question: "Who won the PFA Player of the year in 2011/2012?",
         answers: [{
                 text: "Wayne Rooney",
                 correct: false
@@ -388,7 +393,7 @@ let questions = [{
     },
     {
         id: 9,
-        question: "Which of these teams has more all time wins in the Premier League",
+        question: "Which of these teams has more all time wins in the Premier League?",
         answers: [{
                 text: "Everton",
                 correct: true
@@ -476,7 +481,7 @@ let questions = [{
     },
     {
         id: 13,
-        question: "Who holds the record for most Premier League headed goals",
+        question: "Who holds the record for most Premier League headed goals?",
         answers: [{
                 text: "Harry Kane",
                 correct: false
@@ -498,7 +503,7 @@ let questions = [{
     },
     {
         id: 14,
-        question: "Who holds the record for all time penalty saves in the Premier League",
+        question: "Who holds the record for all time penalty saves in the Premier League?",
         answers: [{
                 text: "Lukas Fabianski",
                 correct: true
@@ -520,7 +525,7 @@ let questions = [{
     },
     {
         id: 15,
-        question: "Which of these players has hit the woodwork the most this season",
+        question: "Which of these players has hit the woodwork the most this season?",
         answers: [{
                 text: "Joelinton",
                 correct: false
@@ -542,7 +547,7 @@ let questions = [{
     },
     {
         id: 16,
-        question: "What is the current capacity of Old Trafford, home of Manchester United",
+        question: "What is the current capacity of Old Trafford, home of Manchester United?",
         answers: [{
                 text: "76,427",
                 correct: false
@@ -696,7 +701,7 @@ let questions = [{
     },
     {
         id: 23,
-        question: "Which team finished runner up in the 2008/09 season",
+        question: "Which team finished runner up in the 2008/09 season?",
         answers: [{
                 text: "Manchester United",
                 correct: false
@@ -762,7 +767,7 @@ let questions = [{
     },
     {
         id: 26,
-        question: "Who was the youngest player to ever play in the Premier League",
+        question: "Who was the youngest player to ever play in the Premier League?",
         answers: [{
                 text: "Jack Wilshere",
                 correct: false
@@ -784,7 +789,7 @@ let questions = [{
     },
     {
         id: 27,
-        question: "Who was the oldest player to play in the Premier League",
+        question: "Who was the oldest player to play in the Premier League?",
         answers: [{
                 text: "Edwin van der Sar",
                 correct: false
@@ -806,7 +811,7 @@ let questions = [{
     },
     {
         id: 28,
-        question: "Which of these players is one of only 2 players to score a penalty with both feet",
+        question: "Which of these players is one of only 2 players to score a penalty with both feet?",
         answers: [{
                 text: "Peter Odemwingie",
                 correct: false
@@ -828,7 +833,7 @@ let questions = [{
     },
     {
         id: 29,
-        question: "Who is the most substituted player in Premier League history",
+        question: "Who is the most substituted player in Premier League history?",
         answers: [{
                 text: "Gareth Barry",
                 correct: false

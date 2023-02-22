@@ -75,12 +75,11 @@ body h1 {
 }
 
 .btn:hover {
-    border: 2px solid white;
     background-color: #9bf6fa;
 }
 
 .control-buttons {
-    color: white;
+    color: #3d195b;
     height: 60px;
     background-color: #04f5ff;
     border-radius: 50px;
@@ -112,7 +111,7 @@ body h1 {
 }
 
 #rules-button:hover {
-    background-color: #00ff85;
+    background-color: #9bf6fa;
 }
 
 #rules {
@@ -150,7 +149,7 @@ body h1 {
 }
 
 #start-from-rules:hover {
-    background-color: #00ff85;
+    background-color: #9bf6fa;
 }
 
 #start-from-rules-div {
@@ -170,8 +169,7 @@ body h1 {
 
 #start-button:hover,
 #next-button:hover {
-    background-color: #00ff85;
-    font-family: 'Merriweather', serif;
+    background-color: #9bf6fa;
 }
 
 .controls {
