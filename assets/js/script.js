@@ -62,6 +62,10 @@ function finishGame() {
     currentQuestionIndex = 0;
     clearStatusClass(document.body);
     resetScore();
+    clicked = false;
+    currentQuestionIndex = 0
+    questions = questions.concat(a);
+
 }
 
 // shows game rules when button is clicked. Hides start screen
@@ -73,13 +77,15 @@ function showRules() {
 }
 
 // shows next random question. Removes duplicate question from array using splice
+var a = [];
 
 function nextQuestion() {
     resetQuiz();
     const questionIndex = Math.floor(Math.random() * questions.length);
     displayedQuestion = questions[questionIndex];
     showQuestion(displayedQuestion);
-    questions.splice(questionIndex, 1);
+    a = questions.splice(questionIndex, 1).concat(a);
+    console.log(a);
 }
 
 // Populates the question area with questions and populates buttons with answers from the array.
