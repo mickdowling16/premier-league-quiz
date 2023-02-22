@@ -220,11 +220,15 @@ The questions for this quiz were taken from the official Premier League website 
 - https://www.goal.com/en/news/best-football-quiz-questions-trivia-answers/1dfwcyp3388zg1lon8wlit8q42
 - https://quiz-questions.uk/premier-league-football-quiz/
 
-I also used a couple different resources to help me with my code. I found useful information in a variety of different places all linked below. I used these sources along with my own knowledge to build my javascript functions and to help me on parts I was stuck on. Any code taken is also referenced in the comments in my files.
+I also used a couple different resources to help me with my code. I found useful information in a variety of different places all linked below. I found blogs and guides online to help explain concepts I ended up using in my project. I used these sources along with my own knowledge to build my javascript functions and to help me on parts I was stuck on. Any code taken is also referenced in the comments in my files.
 - https://simplestepscode.com/javascript-quiz-tutorial/
 - https://www.sitepoint.com/simple-javascript-quiz/
+- https://blog.webdevsimplified.com/2022-01/event-listeners/
+- https://blog.webdevsimplified.com/2020-11/class-list/
+- https://blog.webdevsimplified.com/2020-09/arrow-functions/
 - https://www.youtube.com/watch?v=LQGTb112N_c
 - https://www.youtube.com/watch?v=riDzcEQbX6k
+- https://www.youtube.com/WebDevSimplified
 - https://www.w3schools.com/
 - https://stackoverflow.com/questions/57425235/how-to-make-the-button-only-once-click
 - Code Institute - Love Maths Run Through Project

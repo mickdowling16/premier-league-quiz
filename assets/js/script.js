@@ -89,7 +89,7 @@ function nextQuestion() {
 }
 
 // Populates the question area with questions and populates buttons with answers from the array.
-// parts of code was written with help from - Web Dev Simplified YouTube channel
+// parts of code was written with help from - Web Dev Simplified YouTube channel and website
 
 function showQuestion(question) {
     questionElement.innerText = question.question;
@@ -106,7 +106,7 @@ function showQuestion(question) {
 }
 
 // gives answer when user clicks a button, increments correct or incorrect score and changed clicked value to true 
-// parts of code was written with help from - Web Dev Simplified YouTube channel
+// parts of code was written with help from - Web Dev Simplified YouTube channel and website
 
 function selectAnswer(e) {
     let selectedButton = e.target;
@@ -148,7 +148,7 @@ function showScore() {
 }
 
 // change colour of buttons depending on answer. Red for wrong green for correct
-// parts of code was written with help from - Web Dev Simplified YouTube channel
+// parts of code was written with help from - Web Dev Simplified YouTube channel and website
 
 function setStatusClass(element, Correct) {
     clearStatusClass(element);
