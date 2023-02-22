@@ -8,7 +8,7 @@ The objective of this project was to create a fun premier league quiz to test th
 
 ## User Stories
 
-### Client Goals
+### User Goals
 
 - To be able to access the quiz on different devices. Mobile, desktop and table.
 - To clearly understand how to play the game
@@ -16,16 +16,9 @@ The objective of this project was to create a fun premier league quiz to test th
 - To be provided with score updates throughout the quiz
 - To be given the correct answer after each question
 
-### First Time Visitor Goals
-
-- To be able to easily play the quiz 
-- To be able to easily read the questions and provide an answer
-- To be challenged by a variety of different questions
-
 ### Returning User Goals
 
 - To be met with a variety of random questions in each new game
-- To be able to see other users scores on a highscore table
 - For each game to be different
 
 ---
@@ -132,7 +125,10 @@ ADD OTHER SCREENSHOT!!
 
 ### User Stories
 
-- write solutions to user stories in this area
+| User Goals | Testing |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
 
 ### Responsiveness
 
