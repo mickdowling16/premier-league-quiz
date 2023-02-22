@@ -120,11 +120,11 @@ I used lighthouse to test the performance of my quiz to make sure it loaded fast
 
 My first lighthouse test returned good results and I was happy with the overall performance of my website. The two warnings that were given was to add a meta description to my HTML file for SEO and to rezie my logo image for performance.
 
-![first lighthouse test results](./documentation/first-lighthouse-test.PNG)
+![first lighthouse test results](./documentation/first-lighthouse-test.png)
 
 When I fixed these two issues I got the below result. This means my site is very accessable, performs to a high level and is SEO compliant.
 
-![second lighthouse test result](./documentation/lighthouse-test-2.PNG)
+![second lighthouse test result](./documentation/lighthouse-test-2.png)
 
 ### User Stories
 

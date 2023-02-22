@@ -1,18 +1,16 @@
 ### Start Page
 
-![start screen of quiz](./documentation/start-screen.PNG)
+![start screen of quiz](../documentation/start-screen-old.png))
 
 ### Quiz Rules 
 
-![quiz rules](./documentation/quiz-rules.PNG)
+![quiz rules](../documentation/quiz-rules-old.png)
 
 ### Questions
 
-![quiz questions](./documentation/questions.PNG)
-
-![incorrect answer](./documentation/incorrect-answer.PNG)
-![correct answer](./documentation/correct-answer.PNG)
+![incorrect answer](../documentation/incorrect-answer-old.png)
+![correct answer](../documentation/correct-answer-old.png)
 
 ### Show Score
 
-![show score button](./documentation/show-score.PNG)
+![show score button](../documentation/show-score-old.png)

@@ -1,1 +1,1 @@
-![css validator results](../documentation/css-validator-check.PNG)
+![css validator results](../documentation/css-validator-check.png)
