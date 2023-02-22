@@ -15,7 +15,7 @@ const answerButtonsElement = document.getElementById('answer-buttons');
 
 let currentQuestionIndex;
 let clicked = false;
-var a = [];
+let a = [];
 
 // event listeners to trigger funtions when buttons clicked
 
