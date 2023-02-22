@@ -1,5 +1,7 @@
 # Premier League Quiz
 
+![responsive web design](./documentation/responsiveness.png)
+
 ### Objective 
 
 The objective of this project was to create a fun premier league quiz to test the users knowledge of past and present premier league stats and find the true Premier league quiz master! The aim when designing this quiz was to make it easy to use and navigate for the user and to provide feedback on the correct answer and a score counter.
@@ -25,17 +27,19 @@ The objective of this project was to create a fun premier league quiz to test th
 
 ## Design
 
+### Colour Palette
+
 For the design of this quiz I used the official Premier League colours and logo to keep it all relevant to the quiz topic. The primary colour of pink is used as the page background with the purple premier league logo and light blue for the button colours. Each time a question is answered the page background changes to either green or red depending on a correct or incorrect answer. 
 
 ![Premier League Colour Palette](./documentation/premier-league-colour-palette.webp)
 
 ### Typography
 
-The font used in this project was Rubik. I thing this is an astheically pleasing font and it is easy to read and looks clean. This worked perfect for my intended use. I used Google fonts for this.
+The font used in this project was Merriweather, with a backup font of serif. I think this is an astheically pleasing font and it is easy to read and looks clean. This worked perfect for my intended use. I used Google fonts for this.
 
 ### Media
 
-The only media used in this project is the Premier League logo which appears at the top of the page. This was taken from the offical premier league website and will be linked in my credits section below
+The only media used in this project is the Premier League logo which appears at the top of the page. This was taken from the Premier League wikipedia page and will be linked in my credits section below
 
 ---
 
@@ -43,9 +47,11 @@ The only media used in this project is the Premier League logo which appears at 
 
 My quiz site is made up of just one html page which changes when prompted by the user using javascript and css. The design of my page changed throughout the course of the project. In the attched you can see my previous design. I think the design I settled with gave a more clean look especially on smaller screen sizes
 
+[Previous Design](./supporting/previous-design.md)
+
 ### Start Page
 
-This is the first screen a user will see when loading the quiz. There is a start button and a quiz rules button. 
+This is the first screen a user will see when loading the quiz. There is a start button and a quiz rules button. The design brings together the primary colours of the Premier League so it is easily recognisable when a user first loads the page
 
 ![start screen of quiz](./documentation/start-screen-new.PNG)
 
@@ -222,3 +228,4 @@ I also used a couple different resources to help me with my code. I found useful
 - https://www.youtube.com/watch?v=riDzcEQbX6k
 - https://www.w3schools.com/
 - https://stackoverflow.com/questions/57425235/how-to-make-the-button-only-once-click
+- Code Institute - Love Maths Run Through Project
