@@ -94,6 +94,11 @@ body h1 {
     font-size: 2rem;
 }
 
+#start-button:hover,
+#next-button:hover {
+    background-color: #9bf6fa;
+}
+
 #show-score-button {
     padding: 10px 20px;
     font-size: 2rem;
@@ -113,6 +118,8 @@ body h1 {
 #rules-button:hover {
     background-color: #9bf6fa;
 }
+
+/* Quiz rules div stylings */
 
 #rules {
     background-color: #3d195b;
@@ -140,6 +147,8 @@ body h1 {
     padding-bottom: 20px;
 }
 
+/* start button in quiz rules styling */
+
 #start-from-rules {
     font-weight: bold;
     padding: 5px 10px;
@@ -155,9 +164,8 @@ body h1 {
     text-align: center;
 }
 
-
-
 /* styling for correct and incorrect answer */
+
 .correct {
     background-color: #00ff85;
 }
@@ -166,10 +174,7 @@ body h1 {
     background-color: red;
 }
 
-#start-button:hover,
-#next-button:hover {
-    background-color: #9bf6fa;
-}
+/* controls stylings */
 
 .controls {
     margin: auto;
@@ -203,6 +208,8 @@ body h1 {
 .scores {
     display: inline-block;
 }
+
+/* hide class styling to make elements appear and disappear */
 
 .hide {
     display: none;
