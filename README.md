@@ -53,34 +53,34 @@ My quiz site is made up of just one html page which changes when prompted by the
 
 This is the first screen a user will see when loading the quiz. There is a start button and a quiz rules button. The design brings together the primary colours of the Premier League so it is easily recognisable when a user first loads the page
 
-![start screen of quiz](./documentation/start-screen-new.PNG)
+![start screen of quiz](./documentation/start-screen-desktop.png)
 
 ### Quiz Rules 
 
 When the quiz rules button is clicked the rules div shows containing the text with general rules for the game. From here a user can start the quiz directly.
 
-![quiz rules](./documentation/quiz-rules-new.PNG)
+![quiz rules](./documentation/quiz-rules-desktop.png)
 
 ### Questions
 
 When the quiz is started a random question will appear in the game area with 4 possible answers. The correct and incorrect scores are counted and the correct answer is given after the user submits an answer
 
-![quiz questions](./documentation/question-screen-new.PNG)
+![quiz questions](./documentation/question-desktop.png)
 
 When an answer is submitted the buttons and background change colour to indicate correct or incorrect
 
-![incorrect answer](./documentation/incorrect-answer-new.PNG)
-![correct answer](./documentation/correct-answer-new.PNG)
+![incorrect answer](./documentation/incorrect-desktop.png)
+![correct answer](./documentation/correct-desktop.png)
 
 ### Show Score
 
 After the answer is given for question 10 the next button changes to show score. This sends an alert with the players score and a message depending on how many they scored out of 10.
 
-![show score button](./documentation/show-score.PNG)
+![show score button](./documentation/show-score-desktop.png)
 
-When the show score button is clicked this alert pops up with a message. The quiz the resets and brings the user back to the start screen 
+When the show score button is clicked this alert pops up with a message. This message changes depending on the score. If a user gets all questions correct the win the league, if the get between 7 and 9, they finish in the top 4. If they get between 4 and 6 they finish mid table and if they get 3 or below they get relegated. The quiz then resets and brings the user back to the start screen where they can play again.
 
-![score alert](./documentation/show-score-new.PNG)
+![score alert](./documentation/alert-desktop.png)
 
 ---
 
@@ -104,8 +104,6 @@ Throughout this project I made sure to run my code through validators to make su
 - [Link to JavaScript Validator Results](./supporting/js-validator.md)
 
 ## Bugs
-
-### Unsolved Bugs
 
 ### Solved Bugs
 
@@ -175,6 +173,7 @@ It is important for my quiz to be responsive on many different device sizes as q
 | Alert pops up with correct score at the end of game | Alert works as intended with correct score shown | Alert works as intended with correct score shown  | Alert works as intended with correct score shown  |
 | Score increments correctly and does not increase more than once per question | Yes score increments as intended with only one score per button click | Yes score increments as intended with only one score per button click | Yes score increments as intended with only one score per button click |
 | No errors in dev tools when page is run | Error recorded. Could not load favicon. I forgot to link the favicon in the page header. This should fix this error message | Error recorded. Could not load favicon. I forgot to link the favicon in the page header. This should fix this error message  | Error recorded. Could not load favicon. I forgot to link the favicon in the page header. This should fix this error message |
+| Test quiz after multiple uses | After 3 uses my quiz ran out of questions and didn't display the score. This happened on all browsers and had to be fixed by declaring a new array for the questions that were spliced and combining these two arrays at the end of each game | After 3 uses my quiz ran out of questions and didn't display the score. This happened on all browsers and had to be fixed by declaring a new array for the questions that were spliced and combining these two arrays at the end of each game | After 3 uses my quiz ran out of questions and didn't display the score. This happened on all browsers and had to be fixed by declaring a new array for the questions that were spliced and combining these two arrays at the end of each game |
 
 ## Deployment & Local Deployment
 
