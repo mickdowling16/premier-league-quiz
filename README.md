@@ -120,15 +120,22 @@ My first lighthouse test returned good results and I was happy with the overall 
 
 When I fixed these two issues I got the below result. This means my site is very accessable, performs to a high level and is SEO compliant.
 
-
-ADD OTHER SCREENSHOT!!
+![second lighthouse test result](./documentation/lighthouse-test-2.PNG)
 
 ### User Stories
 
 | User Goals | Testing |
 | ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
+| To be able to access the quiz on different devices. Mobile, desktop and table. | I tested the by using Google Developer Tools to check that my quiz looked how it was intended on mobile, desktop and tablet device sizes. I also used my own mobile and tablet devices to run the quiz and check everything worked as intended and the quiz looked good on each device |
+| To clearly understand how to play the game | I achieved this goal by including a game rules button on the start screen so a user game click this button and the game rules div will appear to show how to play the game. From here a user can directly run the game, making it intuitive and easy to play |
+| For the quiz to be layed out in a way that is easy for the user to use | The quiz is layed out with a main start screen when the page is first loaded, from here a user can start the game or read the rules. When the game is started the game area will appear with a question and 4 option buttons. The question font is large and easy to read and the buttons and large enough to be clicked even on smaller devices. Once a answer is clicked the next button will appear bringing the user to the next question. This makes the game very easy to play as the user just has tp follow the on screen instructions and click a button|
+| To be provided with score updates throughout the quiz | A users score is recorded in the score area with a correct score providing 10 points to the points total and an incorrect score awarding 10 points to goals conceded. I done it this way to keep in theme with the premier league and at the end of the game depending on the user score an alert will pop up with a league position. Top of the league, top 4, mid table or relegation. I think this is a fun way to present the score and incourages users to play again for a higher finish|
+| To be given the correct answer after each question | After an answer is given the correct answer button lights up green with the incorrect answers lighing up red. This provides feedback to the user on the correct answer. The body of the quiz also changes colour depending on the answer. Green for correct and red for incorrect |
+
+| Returning User Goal | Testing |
+| ----------- | ----------- |
+| To be met with a variety of random questions in each new game | Each question in the game is a random set of 10 questions picked from the array of 30. Questions do not repeat leading to a random game each time. This randomness could be increased by adding more questions to the array but for the purpose of this project I kept the sample size as 30 |
+| For each game to be different | Each game is different for the user because of the random questions but also the different score alert depending on how well the user does in the quiz. This will encourage users to play again to get a higher league finish |
 
 ### Responsiveness
 
@@ -150,6 +157,15 @@ It is important for my quiz to be responsive on many different device sizes as q
 ![quiz questions on tablet](./documentation/questions-tablet.PNG)
 
 ---
+## Browser Testing
+
+| Tested | Chrome | Firefox | Microsoft Edge|
+| ----------- | ----------- | ----------- | ----------- |
+| site loads with correct font, colours and stylings present | Site loads as intended with all correct stylings | Site loads as intended with all correct stylings | Site loads as intended with all correct stylings |
+| Buttons click and do correct action | All buttons work as intended | All buttons work as intended | All buttons work as intended |
+| Alert pops up with correct score at the end of game | Alert works as intended with correct score shown | Alert works as intended with correct score shown  | Alert works as intended with correct score shown  |
+| Score increments correctly and does not increase more than once per question | Yes score increments as intended with only one score per button click | Yes score increments as intended with only one score per button click | Yes score increments as intended with only one score per button click |
+| No errors in dev tools when page is run | Error recorded. Could not load favicon. I forgot to link the favicon in the page header. This should fix this error message | Error recorded. Could not load favicon. I forgot to link the favicon in the page header. This should fix this error message  | Error recorded. Could not load favicon. I forgot to link the favicon in the page header. This should fix this error message |
 
 ## Deployment & Local Deployment
 

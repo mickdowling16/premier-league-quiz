@@ -93,7 +93,7 @@ function showQuestion(question) {
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
-        button.addEventListener('click', selectAnswer); 
+        button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button);
     });
 }
@@ -183,15 +183,15 @@ function resetScore() {
 function incrementScore() {
     let oldScore = parseInt(document.getElementById('score').innerText);
     if (clicked === false) {
-    document.getElementById('score').innerText = oldScore += 10;
-}
+        document.getElementById('score').innerText = oldScore += 10;
+    }
 }
 
 function incrementWrongAnswer() {
     let oldScore = parseInt(document.getElementById('incorrect').innerText);
     if (clicked === false) {
-    document.getElementById('incorrect').innerText = oldScore += 10;
-}
+        document.getElementById('incorrect').innerText = oldScore += 10;
+    }
 }
 
 // question arrays
