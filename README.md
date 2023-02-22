@@ -229,3 +229,4 @@ I also used a couple different resources to help me with my code. I found useful
 - https://www.w3schools.com/
 - https://stackoverflow.com/questions/57425235/how-to-make-the-button-only-once-click
 - Code Institute - Love Maths Run Through Project
+- https://stackoverflow.com/questions/49581071/splice-value-from-an-array-and-push-spliced-value-into-another-array

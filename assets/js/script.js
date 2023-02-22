@@ -14,8 +14,7 @@ const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 
 let currentQuestionIndex;
-let maxQuestions = 10;
-let clicked = false
+let clicked = false;
 var a = [];
 
 // event listeners to trigger funtions when buttons clicked
@@ -64,7 +63,7 @@ function finishGame() {
     clearStatusClass(document.body);
     resetScore();
     clicked = false;
-    currentQuestionIndex = 0
+    currentQuestionIndex = 0;
     questions = questions.concat(a);
 
 }
@@ -82,7 +81,7 @@ function showRules() {
 function nextQuestion() {
     resetQuiz();
     const questionIndex = Math.floor(Math.random() * questions.length);
-    displayedQuestion = questions[questionIndex];
+    let displayedQuestion = questions[questionIndex];
     showQuestion(displayedQuestion);
     a = questions.splice(questionIndex, 1).concat(a);
     console.log(a);
@@ -127,7 +126,7 @@ function selectAnswer(e) {
     } else {
         incrementWrongAnswer();
     }
-    clicked = true
+    clicked = true;
 }
 
 //   show alert with different message depending on user score
