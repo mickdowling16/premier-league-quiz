@@ -107,13 +107,13 @@ Throughout this project I made sure to run my code through validators to make su
 
 ### Unsolved Bugs
 
-1. I ran into a bug when adding the score counter to my quiz. A user is able to keep clicking the correct answer before clicking the next button and increasing their correct score counter as many as they would like. This is obviously a big issue as the user can skew their results. I was unsure of how to fix this bug.
-
 ### Solved Bugs
 
 1. A bug that I ran into when coding my website was that I was able to randomise my questions but the same question could appear 2 or 3 times in one quiz. This was caused by the question in the array being randomly called multiple times. This problem took me a while to fix and it couldn't get the hang of it. I eventually solved it by assigning the random number I was generating for the question array a variable and using this variable to splice that question from the array so it wouldn't be asked again. Where I was having trouble with this was that I wasn't setting this random number as a variable so I couldn't call it again in my splice. The bug is now fixed and the quiz is working correctly as intended
 
+2. I ran into a bug when adding the score counter to my quiz. A user was able to keep clicking the correct answer before clicking the next button and increasing their correct score counter as many as they would like. This was obviously a big issue as the user can skew their results. I was unsure of how to fix this bug. I fixed this bug by adding a clicked = false variable. When a an answer button was clicked this changed to true. I used an if statement to only increment score when clicked was false and then reset the clicked value back to false after every question. This meant each button could only be clicked once before the next question was loaded, fixing my problem.
 
+3. Another bug I ran into at the testing stage of my project was after 3 rounds of games the quiz would no longer show questions. This was because I had used the splice method to remove questions from my array to avoid duplicates. I fixed this by declaring an empty array variable for these questions to go into. I think add this array back into my questions array at the end of each game. This makes sure the game can be played multiple times. 
 
 
 ### Lighthouse

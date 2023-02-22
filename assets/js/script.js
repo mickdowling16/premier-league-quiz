@@ -16,6 +16,7 @@ const answerButtonsElement = document.getElementById('answer-buttons');
 let currentQuestionIndex;
 let maxQuestions = 10;
 let clicked = false
+var a = [];
 
 // event listeners to trigger funtions when buttons clicked
 
@@ -77,7 +78,6 @@ function showRules() {
 }
 
 // shows next random question. Removes duplicate question from array using splice
-var a = [];
 
 function nextQuestion() {
     resetQuiz();
@@ -194,6 +194,7 @@ function incrementScore() {
     let oldScore = parseInt(document.getElementById('score').innerText);
     if (clicked === false) {
         document.getElementById('score').innerText = oldScore += 10;
+        console.log("correct");
     }
 }
 
@@ -201,6 +202,7 @@ function incrementWrongAnswer() {
     let oldScore = parseInt(document.getElementById('incorrect').innerText);
     if (clicked === false) {
         document.getElementById('incorrect').innerText = oldScore += 10;
+        console.log("incorrect");
     }
 }
 
