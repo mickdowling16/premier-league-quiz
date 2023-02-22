@@ -140,9 +140,12 @@ It is important for my quiz to be responsive on many different device sizes as q
 
 #### Mobile
 
-![start screen on mobile](./documentation/start-screen-mobile.PNG)
+![start screen on mobile](./documentation/mobile-start-screen.png)
 ![quiz rules on mobile](./documentation/quiz-rules-mobile.PNG)
-![quiz questions on mobile](./documentation/questions-mobile.PNG)
+![quiz questions on mobile](./documentation/mobile-question.png)
+![correct questions on mobile](./documentation/mobile-correct.png)
+![incorrect questions on mobile](./documentation/mobile-incorrect.png)
+![score alert on mobile](./documentation/mobile-score-alert.png)
 
 #### Tablet
 
