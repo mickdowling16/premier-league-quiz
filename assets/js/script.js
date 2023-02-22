@@ -82,7 +82,8 @@ function nextQuestion() {
     questions.splice(questionIndex, 1);
 }
 
-// Populates the question area with questions and populates buttons with answers from the array
+// Populates the question area with questions and populates buttons with answers from the array.
+// parts of code was written with help from - Web Dev Simplified YouTube channel
 
 function showQuestion(question) {
     questionElement.innerText = question.question;
@@ -99,6 +100,7 @@ function showQuestion(question) {
 }
 
 // gives answer when user clicks a button, increments correct or incorrect score and changed clicked value to true 
+// parts of code was written with help from - Web Dev Simplified YouTube channel
 
 function selectAnswer(e) {
     let selectedButton = e.target;
@@ -140,6 +142,7 @@ function showScore() {
 }
 
 // change colour of buttons depending on answer. Red for wrong green for correct
+// parts of code was written with help from - Web Dev Simplified YouTube channel
 
 function setStatusClass(element, Correct) {
     clearStatusClass(element);
@@ -179,6 +182,7 @@ function resetScore() {
 }
 
 // Increment correct and incorrect scores if the clicked statement is false. Will not increase score more than once per question
+// parts of this code was written with help from the love maths runthrough project
 
 function incrementScore() {
     let oldScore = parseInt(document.getElementById('score').innerText);

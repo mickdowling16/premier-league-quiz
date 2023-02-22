@@ -144,7 +144,7 @@ It is important for my quiz to be responsive on many different device sizes as q
 #### Mobile
 
 ![start screen on mobile](./documentation/mobile-start-screen.png)
-![quiz rules on mobile](./documentation/quiz-rules-mobile.PNG)
+![quiz rules on mobile](./documentation/quiz-rules-mobile.png)
 ![quiz questions on mobile](./documentation/mobile-question.png)
 ![correct questions on mobile](./documentation/mobile-correct.png)
 ![incorrect questions on mobile](./documentation/mobile-incorrect.png)
@@ -152,9 +152,12 @@ It is important for my quiz to be responsive on many different device sizes as q
 
 #### Tablet
 
-![start screen on tablet](./documentation/start-screen-tablet.PNG)
-![quiz rules on tablet](./documentation/quiz-rules-tablet.PNG)
-![quiz questions on tablet](./documentation/questions-tablet.PNG)
+![start screen on tablet](./documentation/start-screen-tablet.png)
+![quiz rules on tablet](./documentation/quiz-rules-tablet.png)
+![quiz questions on tablet](./documentation/questions-tablet.png)
+![correct answer on tablet](./documentation/correct-tablet.png)
+![incorrect answer on tablet](./documentation/incorrect-tablet.png)
+
 
 ---
 ## Browser Testing
@@ -196,3 +199,26 @@ To Deploy the site using GitHub Pages:
 3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
+
+## Credits
+
+### Media
+
+The only image I used for this project was the premier league logo. I took this image from Wikipedia.
+- https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/1200px-Premier_League_Logo.svg.png
+
+### Content
+
+The questions for this quiz were taken from the official Premier League website and a couple of other sites with premier league quiz questions. All linked below
+- https://www.premierleague.com/
+- https://thesporting.blog/blog/premier-league-trivia-quiz-questions-with-answers
+- https://www.goal.com/en/news/best-football-quiz-questions-trivia-answers/1dfwcyp3388zg1lon8wlit8q42
+- https://quiz-questions.uk/premier-league-football-quiz/
+
+I also used a couple different resources to help me with my code. I found useful information in a variety of different places all linked below. I used these sources along with my own knowledge to build my javascript functions and to help me on parts I was stuck on. Any code taken is also referenced in the comments in my files.
+- https://simplestepscode.com/javascript-quiz-tutorial/
+- https://www.sitepoint.com/simple-javascript-quiz/
+- https://www.youtube.com/watch?v=LQGTb112N_c
+- https://www.youtube.com/watch?v=riDzcEQbX6k
+- https://www.w3schools.com/
+- https://stackoverflow.com/questions/57425235/how-to-make-the-button-only-once-click

@@ -118,11 +118,11 @@ body h1 {
     background-color: #3d195b;
     width: 80%;
     margin: auto;
-    height: 350px;
+    height: 800px;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
-    bottom: 100px;
+    margin-top: 100px;
     position: absolute;
     z-index: 1;
     justify-content: center;
@@ -135,7 +135,7 @@ body h1 {
 
 #rules p {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 2rem;
     width: 80%;
     margin: auto;
     padding-bottom: 20px;
