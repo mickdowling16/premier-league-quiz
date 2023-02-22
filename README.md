@@ -1,6 +1,6 @@
 # Premier League Quiz
 
-![responsive web design](./documentation/responsiveness.png)
+![responsive web design](./documentation/responsive-screenshot.png)
 
 ### Objective 
 
