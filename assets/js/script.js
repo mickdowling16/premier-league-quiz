@@ -1,5 +1,7 @@
 /*jshint esversion: 6 */
 
+// global variables which are called in more than one function
+
 const startButton = document.getElementById('start-button');
 const nextButton = document.getElementById('next-button');
 const gameArea = document.getElementById('game-area');
@@ -13,6 +15,8 @@ const answerButtonsElement = document.getElementById('answer-buttons');
 
 let currentQuestionIndex;
 let maxQuestions = 10;
+let clicked = false
+
 // event listeners to trigger funtions when buttons clicked
 
 startButton.addEventListener('click', runGame);
@@ -28,7 +32,7 @@ nextButton.addEventListener('click', () => {
     clicked = false;
 });
 
-// runs game when start button is clicked
+// runs game when start button is clicked. Hides start screen and rules menu and shows game area
 
 function runGame() {
     console.log("started");
@@ -45,7 +49,7 @@ function runGame() {
     resetScore();
 }
 
-// finishes game after last question and returns user to home screen
+// finishes game after last question and returns user to home screen. Hides question area and makes home screen buttons reappear
 
 function finishGame() {
     console.log("Game over");
@@ -60,7 +64,7 @@ function finishGame() {
     resetScore();
 }
 
-// shows rules div when button is clicked
+// shows game rules when button is clicked. Hides start screen
 
 function showRules() {
     rulesDiv.classList.remove('hide');
@@ -78,8 +82,7 @@ function nextQuestion() {
     questions.splice(questionIndex, 1);
 }
 
-// Populates the question area with questions and answers from the array
-let clicked = false
+// Populates the question area with questions and populates buttons with answers from the array
 
 function showQuestion(question) {
     questionElement.innerText = question.question;
@@ -95,7 +98,7 @@ function showQuestion(question) {
     });
 }
 
-// gives answer when user clicks a button, increments correct or incorrect score
+// gives answer when user clicks a button, increments correct or incorrect score and changed clicked value to true 
 
 function selectAnswer(e) {
     let selectedButton = e.target;
@@ -136,7 +139,7 @@ function showScore() {
     }
 }
 
-// change colour of buttons depending on answer WebGLActiveInfo. Red for wrong green for correct
+// change colour of buttons depending on answer. Red for wrong green for correct
 
 function setStatusClass(element, Correct) {
     clearStatusClass(element);
@@ -154,7 +157,7 @@ function clearStatusClass(element) {
     element.classList.remove('wrong');
 }
 
-// reset answers after every question 
+// reset question and answers after every question 
 
 function resetQuiz() {
     clearStatusClass(document.body);
@@ -164,7 +167,7 @@ function resetQuiz() {
     }
 }
 
-// reset the score when a new game is played
+// reset the score when a new game is run
 
 function resetScore() {
     if (runGame) {
@@ -175,7 +178,7 @@ function resetScore() {
     }
 }
 
-// Increment correct and incorrect scores 
+// Increment correct and incorrect scores if the clicked statement is false. Will not increase score more than once per question
 
 function incrementScore() {
     let oldScore = parseInt(document.getElementById('score').innerText);

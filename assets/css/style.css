@@ -225,6 +225,11 @@ body h1 {
         width: 80%;
     }
 
+    .control-buttons {
+        width: 80%;
+        font-size: 2rem;
+    }
+
 }
 
 @media screen and (max-width: 750px) {
@@ -238,6 +243,7 @@ body h1 {
 @media screen and (max-width: 700px) {
     #question {
         padding: 20px;
+        font-size: 1.5em;
     }
 
     #answer-buttons {
@@ -270,16 +276,13 @@ body h1 {
 
     .home-page-buttons {
         height: 50px;
-        font-size: small;
     }
 
     #start-button {
-        font-size: medium;
         padding: 0;
     }
 
     #rules-button {
-        font-size: medium;
         padding: 0;
     }
 
@@ -296,7 +299,6 @@ body h1 {
 
     #start-from-rules {
         height: 50px;
-        font-size: small;
     }
 }
 
@@ -310,5 +312,10 @@ body h1 {
 @media screen and (max-width: 400px) {
     #rules p {
         font-size: 1rem;
+    }
+
+    .control-buttons {
+        width: 90%;
+        font-size: 2rem;
     }
 }
