@@ -65,6 +65,7 @@ function finishGame() {
     clicked = false;
     currentQuestionIndex = 0;
     questions = questions.concat(a);
+    a = [];
 
 }
 
